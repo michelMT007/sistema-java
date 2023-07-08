@@ -26,14 +26,12 @@ public class SistemaPrincipal extends javax.swing.JFrame {
         // Create the JTable with the model
         jTable2 = new JTable(model);
 
-        // Add the table to a scroll pane
+        // Add the table to a scroll pane jScrollPane2
         JScrollPane scrollPane = new JScrollPane(jTable2);
         initComponents();
         populateTable();
     }
 
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -61,7 +59,7 @@ public class SistemaPrincipal extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -115,7 +113,6 @@ public class SistemaPrincipal extends javax.swing.JFrame {
             for (int i = 1; i <= columnCount; i++) {
                 columnNames[i - 1] = metaData.getColumnName(i);
             }
-
             // Set the column names in the table model
             DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
             model.setColumnIdentifiers(columnNames);
@@ -128,7 +125,6 @@ public class SistemaPrincipal extends javax.swing.JFrame {
                 }
                 model.addRow(rowData);
             }
-
             // Close the statement and connection
             statement.close();
             connection.close();
